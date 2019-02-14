@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="squirrel-sql-3.8.1-standard">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/squirrel-sql-3.8.1-standard.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

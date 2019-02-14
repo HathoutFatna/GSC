@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="contentPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="531.0" prefWidth="773.0" style="-fx-background-color: #EAEDFE;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GestionSportInd.afficherSport.Controller">
+   <children>
+      <Label layoutY="-1.0" prefHeight="58.0" prefWidth="773.0" style="-fx-background-color: #334660;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <Label layoutY="58.0" prefHeight="30.0" prefWidth="773.0" style="-fx-background-color: #9FA7B4;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <ImageView fitHeight="40.0" fitWidth="51.0" layoutX="47.0" layoutY="54.0" opacity="0.3" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/645172-200.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="152.0" layoutY="59.0" prefHeight="17.0" prefWidth="330.0" text="Gestion Des Activités Sportives" textFill="#30313c" AnchorPane.leftAnchor="152.0" AnchorPane.rightAnchor="151.0" AnchorPane.topAnchor="59.0">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="40.0" fitWidth="31.0" layoutX="22.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="22.0" AnchorPane.topAnchor="9.0">
+         <image>
+            <Image url="@img/logo.png" />
+         </image>
+      </ImageView>
+      <VBox layoutY="87.0" prefHeight="444.0" prefWidth="152.0" style="-fx-background-color: #334660;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="87.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="70.0" prefWidth="152.0" style="-fx-background-color: #9FA7B4;">
+               <children>
+                  <Button fx:id="btnsport" mnemonicParsing="false" onAction="#gosport" style="-fx-background-color: Trensparant;">
+                     <graphic>
+                        <Label alignment="CENTER" prefHeight="63.0" prefWidth="131.0" text="Les Sports">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                     </graphic>
+                  </Button>
+                  <ImageView fitHeight="21.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/arrows.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="70.0" prefWidth="152.0" style="-fx-background-color: #334660;">
+               <children>
+                  <Button fx:id="btnentraineur" mnemonicParsing="false" onAction="#goentraineur" style="-fx-background-color: Trensparant;">
+                     <graphic>
+                        <Label fx:id="btnentraineements1" alignment="CENTER" onDragDetected="#goentrainement" prefHeight="69.0" prefWidth="130.0" text="Les Entraineurs">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                     </graphic>
+                  </Button>
+                  <ImageView fitHeight="21.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/arrows.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="70.0" prefWidth="152.0" style="-fx-background-color: #334660;">
+               <children>
+                  <Button fx:id="btnentrainement" mnemonicParsing="false" onAction="#goentrainement" style="-fx-background-color: Trensparant;">
+                     <graphic>
+                        <Label alignment="CENTER" prefHeight="63.0" prefWidth="131.0" text="Les Entrainements">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                     </graphic>
+                  </Button>
+                  <ImageView fitHeight="21.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/arrows.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="70.0" prefWidth="152.0" style="-fx-background-color: #334660;">
+               <children>
+                  <Button fx:id="btncompétition" mnemonicParsing="false" onAction="#gocompétition" prefHeight="70.0" prefWidth="143.0" style="-fx-background-color: Trensparant;">
+                     <graphic>
+                        <Label alignment="CENTER" prefHeight="62.0" prefWidth="135.0" text="Les Compétitions">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </graphic>
+                  </Button>
+                  <ImageView fitHeight="21.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/arrows.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <TabPane layoutX="184.0" layoutY="107.0" prefHeight="378.0" prefWidth="570.0" style="-fx-background-color: #9FA7B4;" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab text="Liste Des Sports Individuels">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="table" layoutY="-3.0" prefHeight="352.0" prefWidth="776.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-206.0" AnchorPane.topAnchor="-3.0">
+                           <columns>
+                              <TableColumn fx:id="nbr" prefWidth="136.0" text="N°" />
+                              <TableColumn fx:id="nom" prefWidth="432.0" text="Nom" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+      <Button fx:id="btnretour" layoutX="70.0" layoutY="46.0" mnemonicParsing="false" onAction="#retour" prefHeight="50.0" prefWidth="52.0" style="-fx-background-color: transparent;">
+         <graphic>
+            <ImageView fitHeight="24.0" fitWidth="24.0" opacity="0.8" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/arrow-left.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button fx:id="btnhome" layoutX="1.0" layoutY="47.0" mnemonicParsing="false" onAction="#home" prefHeight="50.0" prefWidth="46.0" style="-fx-background-color: transparent;" />
+      <Button fx:id="btnajouter" layoutX="482.0" layoutY="492.0" mnemonicParsing="false" onAction="#go" prefHeight="25.0" prefWidth="93.0" text="Ajouter" />
+      <Button fx:id="btnsupprimer" layoutX="369.0" layoutY="492.0" mnemonicParsing="false" onAction="#supprimer" prefHeight="25.0" prefWidth="93.0" text="Supprimer" />
+      <Button fx:id="btnload" layoutX="594.0" layoutY="492.0" mnemonicParsing="false" onAction="#load" prefHeight="25.0" prefWidth="93.0" text="Actualiser" />
+      <ImageView fitHeight="27.0" fitWidth="29.0" layoutX="9.0" layoutY="58.0" opacity="0.78" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/53517.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="Detail" layoutX="244.0" layoutY="492.0" mnemonicParsing="false" onAction="#Detail" prefHeight="25.0" prefWidth="93.0" text="Détails" />
+      <Button fx:id="help" layoutX="728.0" layoutY="15.0" mnemonicParsing="false" onAction="#help" prefHeight="49.0" prefWidth="36.0" style="-fx-background-color: trensparant;">
+         <graphic>
+            <ImageView fitHeight="40.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/if_Help_104166.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

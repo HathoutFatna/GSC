@@ -1,0 +1,353 @@
+package Entraineurs.listeEntraineur;
+
+import DataBase.src.Connexion;
+
+import Entrainement.listeEntrainement.Entrainement;
+import alert.AlertMaker;
+import export.pdf.ListToPDF;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+
+import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.StackPane;
+import javafx.stage.FileChooser;
+import javafx.stage.Stage;
+
+import java.awt.*;
+import java.io.File;
+import java.io.IOException;
+import java.net.URL;
+import java.nio.file.Paths;
+import java.sql.Connection;
+import java.sql.ResultSet;
+
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+
+public class Controller implements Initializable{
+  private ObservableList <Entraineur> list ;
+
+    Connection conn=Connexion.connecterDB();
+
+
+    @FXML
+    private AnchorPane contentPane;
+    @FXML
+    private static StackPane  rootPane;
+    @FXML
+    private ImageView home;
+
+    @FXML
+    private Button retour;
+
+    @FXML
+    private TextField recherche;
+
+    @FXML
+    private Button ajouter;
+
+
+    @FXML
+    private Button supprimer;
+
+    @FXML
+    private Button imprimer;
+
+    @FXML
+    private Button help;
+
+    @FXML
+    private TableView<Entraineur> tableView;
+    @FXML
+    public static TableView<Entraineur> table;
+
+    @FXML
+    private TableColumn<Entraineur, Integer> NCol;
+
+    @FXML
+    private TableColumn<Entraineur, String> nomCol;
+
+    @FXML
+    private TableColumn<Entraineur, String> prenomCol;
+
+    @FXML
+    private Button go;
+
+    @FXML
+    public void retour(ActionEvent event) throws IOException {
+        try {
+            URL url = Paths.get("./Fxml/_Home.fxml").toUri().toURL();
+            FXMLLoader loader = new FXMLLoader(url);
+            Stage stage = (Stage) retour.getScene().getWindow();
+            Scene scene = new Scene(loader.load());
+            stage.setScene(scene);
+        }catch (IOException io){
+            io.printStackTrace();
+        }
+    }
+
+    @FXML
+    public void passer(ActionEvent event) throws IOException {
+        try {
+            URL url = Paths.get("./Fxml/_Home.fxml").toUri().toURL();
+            FXMLLoader loader = new FXMLLoader(url);
+            Stage stage = (Stage) go.getScene().getWindow();
+            Scene scene = new Scene(loader.load());
+            stage.setScene(scene);
+        }catch (IOException io){
+            io.printStackTrace();
+        }
+    }
+    @FXML
+    public void ajouter(ActionEvent event) throws IOException {
+        try {
+            URL url = Paths.get("./Fxml/h20.fxml").toUri().toURL();
+            FXMLLoader loader = new FXMLLoader(url);
+            Stage stage = (Stage) ajouter.getScene().getWindow();
+            Scene scene = new Scene(loader.load());
+            stage.setScene(scene);
+        }catch (IOException io){
+            io.printStackTrace();
+        }
+    }
+
+    @FXML
+    private Button sport;
+
+    @FXML
+    public void sport(ActionEvent event) throws IOException {
+        try {
+            URL url = Paths.get("./Fxml/h4.fxml").toUri().toURL();
+            FXMLLoader loader = new FXMLLoader(url);
+            Stage stage = (Stage) sport.getScene().getWindow();
+            Scene scene = new Scene(loader.load());
+            stage.setScene(scene);
+        }catch (IOException io){
+            io.printStackTrace();
+        }
+    }
+
+    @FXML
+    private Button entraineur;
+
+    @FXML
+    public void entraineur(ActionEvent event) throws IOException {
+        try {
+            URL url = Paths.get("./Fxml/h9.fxml").toUri().toURL();
+            FXMLLoader loader = new FXMLLoader(url);
+            Stage stage = (Stage) entraineur.getScene().getWindow();
+            Scene scene = new Scene(loader.load());
+            stage.setScene(scene);
+        }catch (IOException io){
+            io.printStackTrace();
+        }
+    }
+
+    @FXML
+    public void help(ActionEvent event) throws IOException {
+        try {
+            URL url = Paths.get("./Fxml/help.fxml").toUri().toURL();
+            FXMLLoader loader = new FXMLLoader(url);
+            Stage stage = (Stage) help.getScene().getWindow();
+            Scene scene = new Scene(loader.load());
+            stage.setScene(scene);
+        }catch (IOException io){
+            io.printStackTrace();
+        }
+    }
+    @FXML
+    private Button entrainement;
+
+    @FXML
+    public void entrainement(ActionEvent event) throws IOException {
+        try {
+            URL url = Paths.get("./Fxml/h5.fxml").toUri().toURL();
+            FXMLLoader loader = new FXMLLoader(url);
+            Stage stage = (Stage) entrainement.getScene().getWindow();
+            Scene scene = new Scene(loader.load());
+            stage.setScene(scene);
+        }catch (IOException io){
+            io.printStackTrace();
+        }
+    }
+
+    @FXML
+    private Button compétition;
+
+    @FXML
+    public void compétition(ActionEvent event) throws IOException {
+        try {
+            URL url = Paths.get("./Fxml/h18.fxml").toUri().toURL();
+            FXMLLoader loader = new FXMLLoader(url);
+            Stage stage = (Stage) compétition.getScene().getWindow();
+            Scene scene = new Scene(loader.load());
+            stage.setScene(scene);
+        }catch (IOException io){
+            io.printStackTrace();
+        }
+    }
+    @Override
+    public void initialize(URL url,ResourceBundle rb) {
+        load();
+    }
+@FXML
+public void load(){
+
+    try {
+        list= FXCollections.observableArrayList();
+        ResultSet rs=conn.createStatement().executeQuery("SELECT * FROM `entraineur`  WHERE 1");
+
+        while (rs.next()) {
+            int num = rs.getInt(1);
+            String name = rs.getString(2);
+            String surname = rs.getString(3);
+
+            list.add(new Entraineur(num, name, surname));
+
+        }
+    } catch (SQLException ex) {
+        System.err.println("Error"+ ex);
+    }
+
+    NCol.setCellValueFactory(new PropertyValueFactory<Entraineur,Integer>("id"));
+    nomCol.setCellValueFactory(new PropertyValueFactory<Entraineur,String>("nom"));
+    prenomCol.setCellValueFactory(new PropertyValueFactory<Entraineur,String>("prénom"));
+
+    tableView.setItems(list);
+}
+@FXML
+private Button Détails;
+    @FXML
+    public void gettt(Entraineur entraineur) {
+        try {
+            URL url = Paths.get("./Fxml/h24_2.fxml").toUri().toURL();
+            FXMLLoader loader = new FXMLLoader(url);
+            Stage stage = (Stage) Détails.getScene().getWindow();
+            Scene scene = new Scene((Parent) loader.load());
+            stage.setScene(scene);
+        }catch (IOException io){
+            io.printStackTrace();
+        }
+
+    }
+    @FXML
+    public void getDetail(ActionEvent event) throws IOException{
+        table= tableView;
+       Entraineur selectedForDetail = table.getSelectionModel().getSelectedItem();
+        if (selectedForDetail == null) {
+            AlertMaker.showErrorMessage("Entraineur non séléctionnée", "séléctionner un entraineur ");
+            return;
+        }
+        gettt(selectedForDetail);
+    }
+
+
+
+
+
+    public boolean deleteEntraineur(Entraineur entraineur) {
+
+            try {
+                String deleteStatement = "DELETE FROM `bdd`.`entraineur` WHERE `entraineur`.`idEntraineur` = ?";
+                java.sql.PreparedStatement stmt = conn.prepareStatement(deleteStatement);
+                stmt.setInt(1, entraineur.getId());
+                int res = stmt.executeUpdate();
+                if (res == 1) {
+                    return true;
+                }
+            } catch (SQLException ex) {
+                Logger.getLogger(Connexion.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            return false;
+        }
+        @FXML
+        public void supprimer(ActionEvent event) {
+            //Fetch the selected row
+            Entraineur selectedForDeletion = tableView.getSelectionModel().getSelectedItem();
+            if (selectedForDeletion == null) {
+                AlertMaker.showErrorMessage("Entraineur non séléctionné", "séléctionner un entraineur à supprimer");
+                return;
+            }
+
+
+
+                Boolean result = deleteEntraineur(selectedForDeletion);
+                if (result) {
+                    AlertMaker.showSimpleAlert("Entraineur Supprimé", selectedForDeletion.getNom() + " was deleted successfully.");
+                    list.remove(selectedForDeletion);
+                } else {
+                    AlertMaker.showSimpleAlert("Failed", selectedForDeletion.getNom() + " ne peut pas être supprimé");
+                }
+
+            }
+
+
+
+
+
+    public static void initPDFExprot(StackPane root, Node contentPane, Stage stage, List<List> data) {
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Save as PDF");
+        FileChooser.ExtensionFilter extFilter
+                = new FileChooser.ExtensionFilter("PDF files (*.pdf)", "*.pdf");
+        fileChooser.getExtensionFilters().add(extFilter);
+        File saveLoc = fileChooser.showSaveDialog(stage);
+        ListToPDF ltp = new ListToPDF();
+       boolean flag = ltp.doPrintToPdf(data, saveLoc, ListToPDF.Orientation.LANDSCAPE);
+        Button openBtn = new Button("View File");
+        openBtn.setOnAction((ActionEvent event1) -> {
+            try {
+                Desktop.getDesktop().open(saveLoc);
+            } catch (Exception exp) {
+                AlertMaker.showErrorMessage("Could not load file", "Cant load file");
+            }
+        });
+        if (flag) {
+            AlertMaker.showSimpleAlert("Export terminé", "Votre Liste à été bien exportée .. Réussi !");
+        }
+    }
+
+    private Stage getStage() {
+        return (Stage) tableView.getScene().getWindow();
+    }
+    @FXML
+    public void exportAsPDF(ActionEvent event) {
+        List<List> printData = new ArrayList<>();
+        String[] headers = { " nom    ", " prénom  "};
+        printData.add(Arrays.asList(headers));
+        for (Entraineur entraineur : list) {
+            List<String> row = new ArrayList<>();
+            row.add(entraineur.getNom());
+            row.add(entraineur.getPrénom());
+            printData.add(row);
+        }
+        initPDFExprot( rootPane, contentPane, getStage(), printData);
+    }
+
+
+
+
+
+
+
+        }
+
+

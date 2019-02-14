@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="531.0" prefWidth="773.0" style="-fx-background-color: #dadee5;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Login.Controller">
+   <children>
+      <Label prefHeight="71.0" prefWidth="773.0" style="-fx-background-color: #334660;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <ImageView fitHeight="63.0" fitWidth="42.0" layoutX="4.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/logo.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="51.0" layoutY="36.0" prefHeight="32.0" prefWidth="402.0" text="Gestion Des Activités Sportives Et Culturelles" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="180.0" layoutY="96.0" prefHeight="367.0" prefWidth="413.0" style="-fx-background-color: #9FA7B4; -fx-background-radius: 10;">
+         <children>
+            <TextField fx:id="Nom" layoutX="102.0" layoutY="109.0" prefHeight="32.0" prefWidth="191.0" promptText="Nom D'utilisateur" />
+            <PasswordField fx:id="password" layoutX="102.0" layoutY="171.0" onAction="#handleLoginButtonAction" prefHeight="32.0" prefWidth="191.0" promptText="Mot De Passe" />
+            <Button fx:id="login" layoutX="132.0" layoutY="254.0" mnemonicParsing="false" onAction="#handleLoginButtonAction" prefHeight="39.0" prefWidth="131.0" style="-fx-background-radius: 10px; -fx-background-color: #334660;" text="S'identifier" textFill="#fffdfd">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Button>
+            <ImageView fitHeight="71.0" fitWidth="70.0" layoutX="161.0" layoutY="20.0" opacity="0.87" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/user_login-512.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="42.0" layoutY="109.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/man-human-person-login-512.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="42.0" layoutY="171.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/lock2-512.png" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+   </children>
+</AnchorPane>

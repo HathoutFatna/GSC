@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Fxml" type="java-resource" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="boxable-1.5-RC" level="project" />
+    <orderEntry type="library" name="commons-codec-1.11" level="project" />
+    <orderEntry type="library" name="commons-csv-1.4" level="project" />
+    <orderEntry type="library" name="commons-logging-1.2" level="project" />
+    <orderEntry type="library" name="derby" level="project" />
+    <orderEntry type="library" name="derbyclient" level="project" />
+    <orderEntry type="library" name="fontawesomefx-commons-8.15" level="project" />
+    <orderEntry type="library" name="fontawesomefx-fontawesome-4.7.0-5" level="project" />
+    <orderEntry type="library" name="fontbox-2.0.4" level="project" />
+    <orderEntry type="library" name="gson-2.8.1" level="project" />
+    <orderEntry type="library" name="guava-21.0" level="project" />
+    <orderEntry type="library" name="jfoenix-8.0.1" level="project" />
+    <orderEntry type="library" name="jfoenix-9.0.1" level="project" />
+    <orderEntry type="library" name="mysql-connector-java-5.1.46" level="project" />
+    <orderEntry type="library" name="pdfbox-2.0.3" level="project" />
+    <orderEntry type="library" name="slf4j-api-1.7.25" level="project" />
+    <orderEntry type="library" name="slf4j-simple-1.7.25" level="project" />
+    <orderEntry type="library" name="simple-java-mail-5.0.3" level="project" />
+    <orderEntry type="library" name="javax.mail-api-1.4.7" level="project" />
+    <orderEntry type="library" name="javax.mail" level="project" />
+    <orderEntry type="library" name="activation-1.1" level="project" />
+    <orderEntry type="library" name="emailaddress-rfc2822-1.1.0" level="project" />
+    <orderEntry type="library" name="javax.mail-1.5.5" level="project" />
+    <orderEntry type="library" name="squirrel-sql-3.8.1-standard" level="project" />
+  </component>
+</module>

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="boxable-1.5-RC">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/boxable-1.5-RC.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

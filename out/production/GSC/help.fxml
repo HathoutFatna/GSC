@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="484.0" prefWidth="668.0" style="-fx-background-color: #9FA7B4;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="help.Controller">
+   <children>
+      <Label layoutY="-1.0" prefHeight="30.0" prefWidth="668.0" style="-fx-background-color: #334660;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-1.0" />
+      <Label alignment="CENTER" layoutX="208.0" layoutY="1.0" prefHeight="30.0" prefWidth="235.0" text="aide" textAlignment="CENTER" textFill="#171717" textOverrun="CENTER_ELLIPSIS" AnchorPane.leftAnchor="208.0" AnchorPane.topAnchor="1.0">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="28.0" layoutY="34.0" prefHeight="444.0" prefWidth="615.0" style="-fx-background-color: white; -fx-background-radius: 10px;" AnchorPane.bottomAnchor="6.0" AnchorPane.leftAnchor="28.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="34.0">
+         <children>
+            <Label layoutX="48.0" layoutY="20.0" prefHeight="43.0" prefWidth="541.0" text="ce programme là est un outil pour la gestion des activités sportives et culturelles" />
+            <Label layoutX="28.0" layoutY="15.0" text="Description:">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="36.0" layoutY="54.0" text=" d'une université." />
+            <Label layoutX="28.0" layoutY="110.0" text="Comment utiliser ce programme?">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="16.0" fitWidth="17.0" layoutX="45.0" layoutY="150.0">
+               <image>
+                  <Image url="@img/53517.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="72.0" layoutY="143.0" prefHeight="30.0" prefWidth="541.0" text="Pour passer à la page principale." />
+            <ImageView fitHeight="16.0" fitWidth="17.0" layoutX="46.0" layoutY="173.0">
+               <image>
+                  <Image url="@img/arrow-left.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="16.0" fitWidth="17.0" layoutX="47.0" layoutY="195.0">
+               <image>
+                  <Image url="@img/4-2-loupe-png-clipart-thumb.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="73.0" layoutY="166.0" prefHeight="30.0" prefWidth="541.0" text="Pour passer à la page précedente." />
+            <Label layoutX="73.0" layoutY="188.0" prefHeight="30.0" prefWidth="541.0" text="Pour faire une recherche." />
+            <Label layoutX="41.0" layoutY="127.0" text="Les icones de bases:">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="48.0" layoutY="72.0" prefHeight="30.0" prefWidth="541.0" text="il est developpé afin d'aider l'administration à la gestion de ces activités." />
+            <Label layoutX="58.0" layoutY="270.0" prefHeight="30.0" prefWidth="541.0" text="cet outil permet à l'administrateur d'ajouter des étudiants,des entraineurs... " />
+            <Label layoutX="58.0" layoutY="311.0" prefHeight="43.0" prefWidth="541.0" text="cet outil permet à l'administrateur de supprimer n'importe quelle information " />
+            <Label layoutX="58.0" layoutY="222.0" prefHeight="30.0" prefWidth="541.0" text="pour la securité des informations , l'administrateur doit s'identifier pour travailler " />
+            <Label layoutX="58.0" layoutY="359.0" prefHeight="43.0" prefWidth="541.0" text="au cas d'avoir des fautes ou une information a été changé , l'administrateur " />
+            <Label layoutX="46.0" layoutY="245.0" text="sur ce programme." />
+            <Label layoutX="46.0" layoutY="293.0" text="et de créer évenements,des competitions.." />
+            <Label layoutX="46.0" layoutY="340.0" text="déjà créer." />
+            <Label layoutX="46.0" layoutY="389.0" text="a la possibilité de la changer." />
+            <Button fx:id="go" layoutX="277.0" layoutY="396.0" mnemonicParsing="false" onAction="#passer" style="-fx-background-color: transparent;" textFill="TRANSPARENT">
+               <graphic>
+                  <ImageView fitHeight="43.0" fitWidth="43.0">
+                     <image>
+                        <Image url="@img/53517.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="help2" layoutX="31.0" layoutY="209.0" mnemonicParsing="false" onAction="#help2" style="-fx-background-color: transparent;">
+               <graphic>
+                  <Label text="Comment s'identifier?">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+               </graphic>
+            </Button>
+            <Button fx:id="help4" layoutX="32.0" layoutY="352.0" mnemonicParsing="false" onAction="#help4" style="-fx-background-color: transparent;">
+               <graphic>
+                  <Label text="Comment modifier?">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+               </graphic>
+            </Button>
+            <Button fx:id="help3" layoutX="32.0" layoutY="304.0" mnemonicParsing="false" onAction="#help3" style="-fx-background-color: transparent;">
+               <graphic>
+                  <Label text="Comment supprimer?">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+               </graphic>
+            </Button>
+            <Button fx:id="help1"  layoutX="32.0" layoutY="257.0" mnemonicParsing="false" onAction="#help1" style="-fx-background-color: transparent;">
+               <graphic>
+                  <Label text="Comment ajouter?">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

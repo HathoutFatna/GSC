@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="531.0" prefWidth="773.0" style="-fx-background-color: #dadee5;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Home.Controller">
+   <children>
+      <Circle fill="#80808085" layoutX="132.0" layoutY="382.0" radius="78.0" stroke="#cbcfd185" strokeType="INSIDE" />
+      <Circle fill="#80808085" layoutX="224.0" layoutY="192.0" radius="78.0" stroke="#7f7f7f85" strokeType="INSIDE" />
+      <Circle fill="#80808085" layoutX="616.0" layoutY="382.0" radius="78.0" stroke="#cbcfd185" strokeType="INSIDE" />
+      <Circle fill="#80808085" layoutX="380.0" layoutY="382.0" radius="78.0" stroke="#cbcfd185" strokeType="INSIDE" />
+      <Circle fill="#80808085" layoutX="508.0" layoutY="192.0" radius="78.0" stroke="#7f7f7f85" strokeType="INSIDE" />
+      <ImageView fitHeight="53.0" fitWidth="52.0" layoutX="106.0" layoutY="317.0" opacity="0.8" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/soccersports_futbo_13301.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="53.0" fitWidth="52.0" layoutX="198.0" layoutY="127.0" opacity="0.8" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/graduate-student-avatar.2966dc922e17.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="53.0" fitWidth="52.0" layoutX="354.0" layoutY="317.0" opacity="0.8" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/soccer-ball_39433.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="63.0" fitWidth="52.0" layoutX="482.0" layoutY="127.0" opacity="0.8" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/Agenda-512.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="53.0" fitWidth="52.0" layoutX="590.0" layoutY="313.0" opacity="0.82" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/13644-200.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="68.0" layoutY="369.0" mnemonicParsing="false" prefHeight="79.0" prefWidth="128.0" style="-fx-background-color: transparent;" text="GESTION DES ACTIVITES SPORTIVES" textAlignment="CENTER" textFill="#000000c8" wrapText="true">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="160.0" layoutY="185.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="128.0" style="-fx-background-color: transparent;" text="GESTION DES ETUDIANTS" textAlignment="CENTER" textFill="#000000c8" wrapText="true">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="316.0" layoutY="377.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="128.0" style="-fx-background-color: transparent;" text="GESTION DES MATERIAUX" textAlignment="CENTER" textFill="#000000c8" wrapText="true">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="552.0" layoutY="365.0" mnemonicParsing="false" prefHeight="79.0" prefWidth="128.0" style="-fx-background-color: transparent;" text="GESTION DES ACTIVITES CULTURELLES" textAlignment="CENTER" textFill="#000000c8" wrapText="true">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="436.0" layoutY="179.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="144.0" style="-fx-background-color: transparent;" text="CALENDRIER DES EVENEMENTS" textAlignment="CENTER" textFill="#000000c8" wrapText="true">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Label prefHeight="71.0" prefWidth="773.0" style="-fx-background-color: #334660;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <ImageView fitHeight="63.0" fitWidth="42.0" layoutX="4.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/logo.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="51.0" layoutY="36.0" prefHeight="32.0" prefWidth="402.0" text="Gestion Des Activités Sportives Et Culturelles" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnGestionEtud" layoutX="160.0" layoutY="185.0" mnemonicParsing="false" onAction="#goGEtudiant" prefHeight="63.0" prefWidth="128.0" style="-fx-background-color: transparent;" styleClass="b" />
+      <Button layoutX="444.0" layoutY="185.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="128.0" style="-fx-background-color: transparent;" styleClass="b" />
+      <Button fx:id="btnGestionActivSport" layoutX="68.0" layoutY="377.0" mnemonicParsing="false" onAction="#goGActicvSport" prefHeight="71.0" prefWidth="128.0" style="-fx-background-color: transparent;" styleClass="b" />
+      <Button fx:id="btnGestionActivCultur" layoutX="552.0" layoutY="373.0" mnemonicParsing="false" onAction="#goGActivCultur" prefHeight="79.0" prefWidth="128.0" style="-fx-background-color: transparent;" styleClass="b" />
+      <Button fx:id="btnMatériaux" layoutX="316.0" layoutY="373.0" mnemonicParsing="false" onAction="#goGMatériaux" prefHeight="71.0" prefWidth="128.0" style="-fx-background-color: transparent;" styleClass="b" />
+      <Button fx:id="logout" layoutX="14.0" layoutY="71.0" mnemonicParsing="false" onAction="#logout" prefHeight="52.0" prefWidth="52.0" style="-fx-background-color: trensparent;">
+         <graphic>
+            <ImageView fitHeight="64.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/log_off-512.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="btnrecherche" layoutX="694.0" layoutY="40.0" mnemonicParsing="false" onAction="#btnrecherche" text="Recherche" />
+      <ImageView fitHeight="30.0" fitWidth="24.0" layoutX="668.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/4-2-loupe-png-clipart-thumb.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="11.0" layoutY="119.0" text="Déconnexion" />
+   </children>
+</AnchorPane>

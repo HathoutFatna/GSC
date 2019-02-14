@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="531.0" prefWidth="773.0" style="-fx-background-color: #EAEDFE;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GestionCulture.activitéCulturelle.Controller">
+   <children>
+      <Label layoutY="-1.0" prefHeight="58.0" prefWidth="773.0" style="-fx-background-color: #334660;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <Label layoutY="58.0" prefHeight="30.0" prefWidth="773.0" style="-fx-background-color: #9FA7B4;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <ImageView fitHeight="40.0" fitWidth="51.0" layoutX="37.0" layoutY="54.0" opacity="0.3" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/645172-200.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="152.0" layoutY="59.0" prefHeight="17.0" prefWidth="330.0" text="Gestion Des Activités Culturelle" textFill="#30313c" AnchorPane.leftAnchor="152.0" AnchorPane.rightAnchor="151.0" AnchorPane.topAnchor="59.0">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="384.0" fitWidth="603.0" layoutX="162.0" layoutY="108.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="162.0" AnchorPane.topAnchor="108.0">
+         <image>
+            <Image url="@img/polygon.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="40.0" fitWidth="31.0" layoutX="22.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="22.0" AnchorPane.topAnchor="9.0">
+         <image>
+            <Image url="@img/logo.png" />
+         </image>
+      </ImageView>
+      <VBox layoutY="87.0" prefHeight="444.0" prefWidth="152.0" style="-fx-background-color: #334660;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="87.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="70.0" prefWidth="152.0" style="-fx-background-color: #9FA7B4;">
+               <children>
+                  <Button fx:id="Activité" mnemonicParsing="false" onAction="#activity" style="-fx-background-color: trensparant;">
+                     <graphic>
+                        <Label alignment="CENTER" prefHeight="71.0" prefWidth="131.0" style="-fx-background-color: Trenspparant;" text="Les activités">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                     </graphic>
+                  </Button>
+                  <ImageView fitHeight="21.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/arrows.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="70.0" prefWidth="152.0" style="-fx-background-color: #334660;">
+               <children>
+                  <Button fx:id="eventt" mnemonicParsing="false" onAction="#event" style="-fx-background-color: trensparant;">
+                     <graphic>
+                        <Label alignment="CENTER" prefHeight="71.0" prefWidth="131.0" style="-fx-background-color: Trenspparant;" text="Les Evènements">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                     </graphic>
+                  </Button>
+                  <ImageView fitHeight="21.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/arrows.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Button fx:id="go" layoutX="2.0" layoutY="57.0" mnemonicParsing="false" onAction="#passer" prefHeight="25.0" prefWidth="40.0" style="-fx-background-color: trensparant;">
+         <graphic>
+            <ImageView fx:id="home" fitHeight="25.0" fitWidth="24.0" opacity="0.78" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/53517.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button fx:id="listeEtud" layoutX="308.0" layoutY="219.0" mnemonicParsing="false" onAction="#listeEtud" prefHeight="47.0" prefWidth="312.0" text="Liste Des Etudiants">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Button>
+      <Button fx:id="listeEvent" layoutX="308.0" layoutY="286.0" mnemonicParsing="false" onAction="#listeEvent" prefHeight="47.0" prefWidth="312.0" text="Liste Des Evènements">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Button>
+      <Button fx:id="retour" layoutX="68.0" layoutY="59.0" mnemonicParsing="false" onAction="#retour" prefHeight="25.0" prefWidth="40.0" style="-fx-background-color: TRENSPARANT;">
+         <graphic>
+            <ImageView fx:id="back" fitHeight="24.0" fitWidth="24.0" opacity="0.8" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/arrow-left.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="help" layoutX="721.0" layoutY="15.0" mnemonicParsing="false" onAction="#help" prefHeight="49.0" prefWidth="36.0" style="-fx-background-color: trensparant;">
+         <graphic>
+            <ImageView fitHeight="40.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/if_Help_104166.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

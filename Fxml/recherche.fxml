@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="484.0" prefWidth="668.0" style="-fx-background-color: #9FA7B4;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="recherche.Controller">
+   <children>
+      <Label layoutY="-1.0" prefHeight="30.0" prefWidth="668.0" style="-fx-background-color: #334660;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-1.0" />
+      <Label alignment="CENTER" layoutX="202.0" layoutY="-1.0" prefHeight="30.0" prefWidth="265.0" text="Resultats de recherche" textAlignment="CENTER" textFill="#171717" textOverrun="CENTER_ELLIPSIS" AnchorPane.leftAnchor="202.0" AnchorPane.topAnchor="-1.0">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="27.0" layoutY="50.0" prefHeight="417.0" prefWidth="615.0" style="-fx-background-color: white; -fx-background-radius: 10px;" AnchorPane.bottomAnchor="17.0" AnchorPane.leftAnchor="27.0" AnchorPane.rightAnchor="26.0" AnchorPane.topAnchor="50.0">
+         <children>
+            <TableView fx:id="tab" layoutX="41.0" layoutY="89.0" prefHeight="301.0" prefWidth="550.0" style="-fx-background-color: #9FA7B4;">
+               <columns>
+                  <TableColumn fx:id="ism" prefWidth="276.0" text="Nom" />
+                  <TableColumn fx:id="tag" minWidth="0.0" prefWidth="273.0" text="Tag" />
+               </columns>
+            </TableView>
+            <Label layoutX="41.0" layoutY="37.0" text="Rechercher : " />
+            <TextField fx:id="txt" layoutX="149.0" layoutY="33.0" />
+            <Button fx:id="btnrecherche" layoutX="316.0" layoutY="30.0" mnemonicParsing="false" onAction="#chercher" prefHeight="25.0" prefWidth="40.0" style="-fx-background-color: TRENSPARANT;">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/4-2-loupe-png-clipart-thumb.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnretour" layoutX="571.0" mnemonicParsing="false" onAction="#btnretour" prefHeight="25.0" prefWidth="40.0" style="-fx-background-color: trensparant;">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="24.0" opacity="0.78" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/53517.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

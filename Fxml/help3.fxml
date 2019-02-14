@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="484.0" prefWidth="668.0" style="-fx-background-color: #9FA7B4;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="help.Controller">
+   <children>
+      <Label layoutY="-1.0" prefHeight="30.0" prefWidth="668.0" style="-fx-background-color: #334660;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-1.0" />
+      <Label alignment="CENTER" layoutX="168.0" layoutY="1.0" prefHeight="30.0" prefWidth="299.0" text="Comment supprimer?" textAlignment="CENTER" textFill="#171717" textOverrun="CENTER_ELLIPSIS" AnchorPane.leftAnchor="168.0" AnchorPane.topAnchor="1.0">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="28.0" layoutY="34.0" prefHeight="444.0" prefWidth="615.0" style="-fx-background-color: white; -fx-background-radius: 10px;" AnchorPane.bottomAnchor="6.0" AnchorPane.leftAnchor="28.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="34.0">
+         <children>
+            <Label layoutX="46.0" layoutY="25.0" prefHeight="30.0" prefWidth="541.0" text="cet outil permet à l'administrateur d'ajouter des étudiants,des entraineurs... " />
+            <Label layoutX="34.0" layoutY="48.0" text="et de créer évenements,des competitions.." />
+            <Button fx:id="go" layoutX="277.0" layoutY="396.0" mnemonicParsing="false" onAction="#passer" style="-fx-background-color: transparent;" textFill="TRANSPARENT">
+               <graphic>
+                  <ImageView fitHeight="43.0" fitWidth="43.0">
+                     <image>
+                        <Image url="@img/53517.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="retour" onAction="#retour" layoutX="147.0" layoutY="395.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="9.0" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fitHeight="45.0" fitWidth="50.0">
+                     <image>
+                        <Image url="@img/arrow-left.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Label layoutX="61.0" layoutY="108.0" text="Comment?">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+   </children>
+</AnchorPane>
